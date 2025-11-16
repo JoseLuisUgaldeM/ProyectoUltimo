@@ -244,7 +244,7 @@ if (($consulta) and ($user = mysqli_fetch_assoc($consulta))) {
               </svg>
               Mis productos
             </a> </li>
-          <li> <a href="#" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
+          <li> <a href="mostrar.php" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
                 <use xlink:href="#table"></use>
               </svg>
               Favoritos
