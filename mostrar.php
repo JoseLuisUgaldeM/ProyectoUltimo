@@ -7,7 +7,9 @@
    
     session_start();
 
-    $sql = " SELECT *  from usuario INNER JOIN producto INNER JOIN imagenes_ruta ";
+    $sql = "SELECT *  from usuario 
+            INNER JOIN producto ON producto.id_usuario= usuario.id_usuario 
+            INNER JOIN imagenes_ruta ON imagenes_ruta.id_usuario= producto.id_usuario;  ";
 
     $resultado= $conexion->query($sql);
 
