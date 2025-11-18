@@ -226,7 +226,8 @@ if (($consulta) and ($user = mysqli_fetch_assoc($consulta))) {
     </div>
     <!-- Hasta aquí la barra de navegación-->
 
-    <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary col-lg-4 col-sm-12">
+<div class="d-flex bg-body-tertiary ">
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary col-lg-5 col-sm-12">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"> <svg class="bi pe-none me-2" width="40" height="32" aria-hidden="true">
           <use xlink:href="#bootstrap"></use>
         </svg>
@@ -259,11 +260,33 @@ if (($consulta) and ($user = mysqli_fetch_assoc($consulta))) {
               </svg>
               Vendedores
             </a> </li>
-        </ul>
-        <hr>
+          </ul>
+          <hr>
+        </div>
+        
+        
+        <div id="carouselExampleInterval" class="carousel slide text-center flex-shrink-0 p-3 bg-body-tertiary col-lg-5 col-sm-12" data-bs-ride="carousel">
+      <div class="carousel-inner text-center" >
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="imagenes/manos.jpg" class="d-block w-100 img-fluid " alt="Foto de ROMAN ODINTSOV: https://www.pexels.com/es-es/foto/manos-sujetando-cartulina-carton-12725405/" >
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="imagenes/electronica.jpg" class="d-block w-100 img-fluid" alt="Foto de ATC Comm Photo: https://www.pexels.com/es-es/foto/primer-plano-de-la-camara-sobre-fondo-negro-306763/">
+        </div>
+        <div class="carousel-item">
+          <img src="imagenes/moto.jpg" class="d-block w-100 img-fluid" alt="Foto de Pragyan Bezbaruah: https://www.pexels.com/es-es/foto/motocicleta-en-medio-de-la-carretera-1715193/">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-
-
+</div>
 
     <script>
       window.onload = function() {

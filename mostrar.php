@@ -9,7 +9,8 @@
 
     $sql = "SELECT *  from usuario 
             INNER JOIN producto ON producto.id_usuario= usuario.id_usuario 
-            INNER JOIN imagenes_ruta ON imagenes_ruta.id_usuario= producto.id_usuario;  ";
+            INNER JOIN imagenes_ruta ON imagenes_ruta.id_usuario= producto.id_usuario
+            WHERE producto.id_producto = imagenes_ruta.id_producto  ;  ";
 
     $resultado= $conexion->query($sql);
 
@@ -32,10 +33,10 @@
         $fichero = 'datos_usuario.json';
 
     if (file_put_contents($fichero, $json_string, LOCK_EX) !== false) {
-    echo "El array JSON se ha copiado correctamente al archivo: $nombre_archivo";
+    echo "El array JSON se ha copiado correctamente al archivo: $fichero";
 } else {
     echo "Error al escribir el archivo.";
 }
 ?>
-?>
+
 

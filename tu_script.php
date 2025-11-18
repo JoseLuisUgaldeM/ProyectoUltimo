@@ -21,6 +21,8 @@ session_start();
 
 $id_usuario = $_SESSION['id_usuario'];
 
+$id_producto = $_SESSION['id_producto'];
+
 $directorioSubidas = "uploads/";
 
 
@@ -41,9 +43,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["foto"])) {
     if (move_uploaded_file($tempArchivo, $rutaCompleta)) {
         try {
             // Guardar solo la ruta relativa en la base de datos
-            $sql = "INSERT INTO imagenes_ruta (nombre_imagen, ruta_imagen, id_usuario) VALUES (?, ? , ?)";
+            $sql = "INSERT INTO imagenes_ruta (nombre_imagen, ruta_imagen, id_usuario, id_producto) VALUES (?, ? , ?, ?)";
             $stmt = $conexion->prepare($sql);
-            $stmt->execute([$nombreOriginal, $rutaCompleta, $id_usuario]);
+            $stmt->execute([$nombreOriginal, $rutaCompleta, $id_usuario, $id_producto]);
 
             echo "La imagen se ha subido correctamente. Ruta guardada: " . $rutaCompleta;
 
